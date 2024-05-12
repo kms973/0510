@@ -6,8 +6,8 @@ import { Route, Router, Routes, BrowserRouter } from 'react-router-dom';
 //component
 import Main from './component/Main';
 import Header from './component/header/Header';
-import Button from './component/header/button/Button';
-import Name from './component/header/inputText/Name';
+import Button from './component/button/Button';
+import Name from './component/inputText/Name';
 
 
 

@@ -4,11 +4,16 @@ import { useState } from "react";
 export default function NameInput(props){
 
     const [inputValue, setInputValue] = useState("");
+    const [submitted, setSubmitted] = useState();
 
+    function handleChange(event) {
+        setInputValue(event.target.value);
+    }
 
-    function handleSummit(){
+    function handleSummit(event){
         event.preventDefault();
         setInputValue('');
+        setSubmitted(inputValue);
     }
 
     return(
@@ -19,11 +24,12 @@ export default function NameInput(props){
                 <input
                     type="text"
                     value={inputValue}
+                    onChange={handleChange}
                     placeholder="입력해주세요"
                 />
                 <button type="submit">제출</button>
             </form>
-            <h1>안녕하세요! {inputValue}님!</h1>
+            {submitted && <h1>안녕하세요! {submitted}님!</h1>}
         </div>
         </>
     )
