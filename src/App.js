@@ -6,6 +6,8 @@ import { Route, Router, Routes, BrowserRouter } from 'react-router-dom';
 //component
 import Main from './component/Main';
 import Header from './component/header/Header';
+import Button from './component/header/button/Button';
+import Name from './component/header/inputText/Name';
 
 
 
@@ -16,6 +18,8 @@ function App() {
       <Header/>
       <Routes>
         <Route exact path='/' Component={Main}/>
+        <Route path='/button' Component={Button}/>
+        <Route path='/name' Component={Name}/>
       </Routes>
       </BrowserRouter>
     </div>
