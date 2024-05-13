@@ -29,7 +29,10 @@ export default function Button (){
             return "승리";
         } else if (think === "패" && count < comcount) {
             return "승리";
-        } else {
+        } else if (count === comcount){
+            return "무승부";
+        } 
+        else {
             return "패배";
         }
     }
